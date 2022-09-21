@@ -1,0 +1,53 @@
+/////////////////
+Variables:
+Las variables con contenedores 
+
+podemos imaginarlo como "cajas" donde podemos guardar diferentes cosas, hay varios tipos de estas "cajas" de diferentes tamaños
+y que guardan diferente tipo de informacion como por ej, numeros, texto...
+
+/////////////////
+Strings:
+
+basicamente son palabras entre " ' (comillas) 
+
+/////////////////
+Funciones:
+
+Las funciones son una parte de codigo que se puede ejecutar a peticion
+retornando valores o realizando acciones segun el codigo que contengan 
+
+hay tres formas de construir una funcion
+
+function PrimeraFuncion() {}
+var SegundaFuncion = function () {};
+var TerceraFuncion = () => {};
+
+se puede pasar informacion a la funcion mediante el "argumento", pueden ser varios argumentos separandolos por coma ","
+
+function PrimeraFuncion(argumento1,argumento2) {}
+
+para que la funcion devuelva un valor es necesario hacer un "Return"
+
+function PrimeraFuncion(argumento1,argumento2) {
+    var suma = argumento1 + argumento2
+    return suma;
+}
+//////////////////
+Declaracion If :
+
+Se ultiliza para controlar el flujo de la ejecucion del codigo mediante operadores de comparacion
+
+por ejemplo en la siguente funcion se realiza una comparacion si el valor del argumento1 "edad" en mayor ">" que 18
+
+si cumple esa comparacion devuelve el valor true, si no devuelve false
+
+function PuedeManejar(edad) {
+    if (edad > 18){
+        return true;
+    }
+    return false;
+}
+///////////////////
+Valores Booleanos:
+
+son valores que puede contener 1 o 0, en javascript se utiliza para definir verdadero "1" o falso "0"
