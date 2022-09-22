@@ -1,0 +1,19 @@
+const { parseGetRemotes } = require("simple-git/src/lib/responses/GetRemoteSummary")
+
+///////////////////////////
+Definicion For
+
+El mismo se utiliza para realizar tareas repetitivas
+
+se compone por 4 partes 
+
+for ( var i = 0              ; i < 1000                   ;            i++                 ) {  return i;   }
+      varirable a utilizar     condicion de ejecucion       incremento de la variable           codigo a ejecutar mientras el blucle se repetitivas
+
+
+
+&& (AND)  se utiliza para para comparar condiciones solo si ambas son true el resultado es true, si todas son false el resultado es false
+
+||  (or)  se utiliza para para comparar condiciones si alguna es true el resultado es true, si todas son false el resultado es false 
+
+! (NOT)  convierte un resultado true en false y viceversa 
