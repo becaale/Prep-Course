@@ -1,0 +1,14 @@
+///////////////////////////
+Definicion Arreglos "Arrays"
+
+la declaracion es la siguiente
+
+var array = [];
+
+un array es una lista de datos, puede guardar varios tipos de datos
+
+la estructura es la siguiente
+
+array = ["string",0123455,array2]
+
+
