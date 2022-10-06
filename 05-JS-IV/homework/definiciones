@@ -1,14 +1,42 @@
 ///////////////////////////
-Definicion Arreglos "Arrays"
+Definicion Objetos
 
-la declaracion es la siguiente
+Los objetos son similares a los arreglos pero con la diferencia que tienen propiedades y metodos
 
-var array = [];
+se declara de la siguiente manera
 
-un array es una lista de datos, puede guardar varios tipos de datos
+var objeto = {
+	propiedad1: "string",
+	propiedad2: 20,
+	propiedad3: true,
+	metodo: function() {return "un metodo es una funcion dentro de un objeto";}
+	array: ["valor1","valor2","valor3"]
+}
 
-la estructura es la siguiente
+estas PROPIEDADES pueden accederse de las siguientes formas
 
-array = ["string",0123455,array2]
+objeto.propiedad1 = "string cambiado"
 
+o
+
+objeto[propiedad2] = 25
+
+los metodos y propiedades se pueden llamar de la siguiente formas 
+
+NOTACION DE PUNTOS
+objeto.metodo()
+objeto.propiedad3 = false
+
+NOTACION DE CORCHETES
+objeto[metodo]()
+objeto["propiedad3"] = false
+
+
+En los objetos los nombres de las propiedades pueden variar por lo que se puede recorrer mediante un bucle FOR...in
+
+for (let propiedades in objeto) {
+
+console.log(propiedades)
+
+}
 
