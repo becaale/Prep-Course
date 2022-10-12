@@ -1,0 +1,30 @@
+
+definicion de Prototype
+
+se declara de la sig manera
+
+objeto.prototype.metodo = function() {
+    return "Hola Mundo!";
+}
+
+prototype nos da acceso a crear "propiedades" y metodos en el ebjeto definiendolos una unica vez
+
+
+/////////////////////
+
+constructors de clases
+
+son plantillas para crear un mismo objeto varias veces con la misma estructura a los que les asignamos los valores que necesitemos
+
+
+una funcion constructora se define de la siguiente manera
+
+
+function Edificio(direccion) {
+    this.direccion = direccion;
+    this.demoler = function () {
+        return "Demoler el edificio d ela direccion " + this. direccion
+    }
+}
+
+var leparc = new Edificio("Av. Gallardo 1000")
