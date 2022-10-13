@@ -1,0 +1,6 @@
+Definicion callback
+
+es la propiedad en JavaScript de pasar una funcion como argumento, 
+se utiliza como "cb" por convencion para la variable que se usara como callback
+
+
