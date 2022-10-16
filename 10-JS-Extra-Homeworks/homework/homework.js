@@ -10,6 +10,8 @@ function deObjetoAmatriz(objeto){
       C: 3
     }) ➞ [["D", 1], ["B", 2], ["C", 3]]*/
   //Escribe tu código aquí
+  var MatrizNueva = Object.entries(objeto);
+  return MatrizNueva;
 }
 
 
@@ -18,6 +20,16 @@ function numberOfCharacters(string) {
   //en formato par clave-valor.
   //Ej: Recibe ---> "adsjfdsfsfjsdjfhacabcsbajda" || Devuelve ---> { a: 5, b: 2, c: 2, d: 4, f: 4, h:1, j: 4, s: 5 } 
   //Escribe tu código aquí
+var objstring = {};
+var contador = 0;
+for (var i=0; i < string.length; i++){
+  contador = 0;
+  for (var f=0; f < string.length; f++){
+    if (string[i]===string[f]){contador++;}
+  }
+  objstring[string[i]] = contador;
+}
+return objstring;
 }
 
 
@@ -26,6 +38,16 @@ function capToFront(s) {
   //al principio de la palabra.
   //Ejemplo: soyHENRY -> HENRYsoy
   //Escribe tu código aquí
+  var mayus = "";
+  var minus = "";
+  for (var i = 0 ; i < s.length ; i++){
+    if (s[i] === s[i].toUpperCase()) {
+      mayus = mayus + s[i]
+    } else {
+      minus = minus + s[i]
+    }
+  }
+return mayus + minus;
 }
 
 
@@ -35,6 +57,29 @@ function asAmirror(str) {
   //pero con cada una de sus palabras invertidas, como si fuera un espejo.
   //Ej: Recibe ---> "The Henry Challenge is close!" || Devuelve ---> "ehT yrneH egnellahC si !esolc"
   //Escribe tu código aquí
+  var arrfrase = [];
+  var palabra = "";
+  var frainv = "";
+
+  for (var i = 0 ; i <= str.length ; i++){
+    if (str[i] === " " || i === str.length) {
+      arrfrase.push(palabra);
+      palabra = "";
+    } else {
+      palabra = palabra + str[i];
+    }
+  }
+
+  for (h = 0; h < arrfrase.length ; h++) {
+    palabra = "";
+    for (var i = arrfrase[h].length ; i > 0 ; i--){
+      palabra = palabra + arrfrase[h][i-1];
+    }
+    frainv = frainv + palabra;
+    if (h < arrfrase.length - 1) {frainv = frainv + " ";}
+  }
+
+  return frainv;
 } 
 
 
@@ -43,6 +88,14 @@ function capicua(numero){
   //La misma debe retornar: "Es capicua" si el número se número que se lee igual de 
   //izquierda a derecha que de derecha a izquierda. Caso contrario retorna "No es capicua"
   //Escribe tu código aquí
+  txtnumero = numero.toString()
+  for (var i = 0; i <= Math.ceil(txtnumero.length/2) ; i++){
+    if (txtnumero[i] !== txtnumero[(txtnumero.length-1)-i]){
+      return "No es capicua";
+    } else if ( i = Math.ceil(txtnumero.length/2)-1) {
+      return "Es capicua";
+    }
+  }
 }
 
 
@@ -50,6 +103,21 @@ function deleteAbc(cadena){
   //Define una función que elimine las letras "a", "b" y "c" de la cadena dada 
   //y devuelva la versión modificada o la misma cadena, en caso de contener dichas letras.
   //Escribe tu código aquí
+  var cadenanueva = "";
+
+  /* //forma facil
+  cadenanueva = cadena.replace("a","");
+  cadenanueva = cadenanueva.replace("b","");
+  cadenanueva = cadenanueva.replace("c","");
+  */
+
+  for (var i = 0 ; i < cadena.length ; i++){
+    if (cadena[i] !== "a" && cadena[i] !== "b" && cadena[i] !== "c") {
+      cadenanueva = cadenanueva + cadena[i];
+    }
+  }
+
+  return cadenanueva;
 }
 
 
@@ -57,6 +125,15 @@ function sortArray(arr) {
   //La función recibe una matriz de strings. Ordena la matriz en orden creciente de longitudes de cadena
   //Ej: Recibe ---> ["You", "are", "beautiful", "looking"] || Devuelve ---> [“You", "are", "looking", "beautiful"]
   //Escribe tu código aquí
+  var maximo = 1;
+  var arrordenado = [];
+  for (let x = 0 ; x <= maximo; x++){
+    for (const elemento of arr){
+      if (maximo<elemento.length){maximo=elemento.length;}
+      if (elemento.length===x){arrordenado.push(elemento)}
+    }
+  }
+  return arrordenado;
 }
 
 
@@ -66,6 +143,18 @@ function buscoInterseccion(arreglo1, arreglo2){
   //Si no tienen elementos en común, retornar un arreglo vacío.
   //Aclaración: los arreglos no necesariamente tienen la misma longitud
   //Escribe tu código aquí  
+  var arrunion = [];
+  for(let elemento1 of arreglo1){
+    for(let elemento2 of arreglo2){
+      if(elemento1===elemento2){
+        for(let elemento3 of arrunion){
+          if(elemento3===elemento2){continue;}
+        }
+        arrunion.push(elemento2);
+      }
+    }
+  }
+  return arrunion;
 }
 
 
