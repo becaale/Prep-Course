@@ -10,8 +10,16 @@ function deObjetoAmatriz(objeto){
       C: 3
     }) ➞ [["D", 1], ["B", 2], ["C", 3]]*/
   //Escribe tu código aquí
+  /* 
   var MatrizNueva = Object.entries(objeto);
-  return MatrizNueva;
+  return MatrizNueva; 
+  */
+var MatrizNueva =[];
+
+for (var clave in objeto){
+  MatrizNueva.push([clave,objeto[clave]]);
+}
+return MatrizNueva;
 }
 
 
@@ -57,10 +65,12 @@ function asAmirror(str) {
   //pero con cada una de sus palabras invertidas, como si fuera un espejo.
   //Ej: Recibe ---> "The Henry Challenge is close!" || Devuelve ---> "ehT yrneH egnellahC si !esolc"
   //Escribe tu código aquí
-  var arrfrase = [];
-  var palabra = "";
-  var frainv = "";
-
+  
+  //var arrfrase = [];
+  //var palabra = "";
+  //var frainv = "";
+  var frainv = [];
+  /* 
   for (var i = 0 ; i <= str.length ; i++){
     if (str[i] === " " || i === str.length) {
       arrfrase.push(palabra);
@@ -69,8 +79,10 @@ function asAmirror(str) {
       palabra = palabra + str[i];
     }
   }
-
-  for (h = 0; h < arrfrase.length ; h++) {
+ */
+  var arrfrase = str.split(' ');
+/* 
+  for (h = 0; h < arrfrase.length ; h++) {  
     palabra = "";
     for (var i = arrfrase[h].length ; i > 0 ; i--){
       palabra = palabra + arrfrase[h][i-1];
@@ -78,8 +90,11 @@ function asAmirror(str) {
     frainv = frainv + palabra;
     if (h < arrfrase.length - 1) {frainv = frainv + " ";}
   }
+ */
 
-  return frainv;
+  arrfrase.forEach(element => { frainv.push(element.split('').reverse().join('')); });
+
+  return frainv.join(' ');
 } 
 
 
